@@ -1,0 +1,13 @@
+{
+    "notify": {
+      "host": "127.0.0.1",
+      "path": "tron/tx",
+      "port": 80
+    },
+    "proxy": {
+      "host": "127.0.0.1",
+      "port": 9050,
+      "user": "test",
+      "pass": "test"
+    }
+}
