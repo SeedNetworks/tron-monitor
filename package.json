@@ -1,0 +1,21 @@
+{
+    "name": "tronmonitor",
+    "version": "0.1.9",
+    "description": "Tron paylib/monitor",
+    "private": true,
+    "author": "mediapays@gmail.com",
+    "license": "Private",
+    "main": "./index.js",
+    "scripts": {
+        "deploy": "rm -rf node_modules;echo \"Install...\";npm install;echo \"Deploying...\";npm run service",
+        "service": "pm2 start npm --name=\"tronmonitor\" -- run -- start;pm2 save --force;pm2 logs",
+        "start": "node ./index.js"
+    },
+    "dependencies": {
+        "bcrypto": "^5.4.0",
+        "chokidar": "^3.5.3",
+        "elliptic": "^6.5.4",
+        "proxy-agent": "^6.2.2",
+        "ws": "^8.13.0"
+    }
+}
